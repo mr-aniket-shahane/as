@@ -1,0 +1,4 @@
+*.dll binary
+*.wasm binary
+*.blat binary
+*.dat binary
