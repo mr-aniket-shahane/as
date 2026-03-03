@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Aniket Shahane - Tech Lead</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <base href="/" />
+    <link href="_framework/dotnet.5d2dwolqev.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-OZ0lDmLGDjojdhGQOu3VTdhDmYHnM5kQr3AAVsNiLV0=" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              heading: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              navy: '#0F172A',
+              blue: '#2563EB',
+              teal: '#14B8A6',
+              'soft-gray': '#F8FAFC',
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        html { scroll-behavior: smooth; }
+        body { @apply bg-soft-gray text-navy dark:bg-navy dark:text-soft-gray antialiased transition-colors duration-300; }
+        h1, h2, h3, h4, h5, h6 { @apply font-heading; }
+      }
+      @layer utilities {
+        .animate-fade-in-up {
+          animation: fadeInUp 0.8s ease-out forwards;
+          opacity: 0;
+        }
+      }
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+    <style>
+      .section-highlight {
+        animation: highlightSection 0.7s;
+      }
+      @keyframes highlightSection {
+        0% { box-shadow: 0 0 0 0 #facf0f; }
+        40% { box-shadow: 0 0 32px 8px #facf0f; }
+        100% { box-shadow: 0 0 0 0 #facf0f; }
+      }
+      /* Scroll reveal animations */
+      .scroll-hidden {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .scroll-hidden.from-left {
+        transform: translateX(-60px);
+      }
+      .scroll-hidden.from-right {
+        transform: translateX(60px);
+      }
+      .scroll-hidden.scale-up {
+        transform: scale(0.9);
+      }
+      .scroll-visible {
+        opacity: 1;
+        transform: translateY(0) translateX(0) scale(1);
+      }
+    </style>
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="webAssembly.styles.css" rel="stylesheet" />
+    <link href="manifest.webmanifest" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+    <script type="importmap">{
+  "imports": {
+    "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.66stpp682q.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.5d2dwolqev.js",
+    "./_framework/dotnet.native.js": "./_framework/dotnet.native.87vtjjdetb.js",
+    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.2tx45g8lli.js"
+  },
+  "scopes": {},
+  "integrity": {
+    "./_framework/blazor.webassembly.66stpp682q.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
+    "./_framework/blazor.webassembly.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
+    "./_framework/dotnet.5d2dwolqev.js": "sha256-OZ0lDmLGDjojdhGQOu3VTdhDmYHnM5kQr3AAVsNiLV0=",
+    "./_framework/dotnet.js": "sha256-OZ0lDmLGDjojdhGQOu3VTdhDmYHnM5kQr3AAVsNiLV0=",
+    "./_framework/dotnet.native.87vtjjdetb.js": "sha256-zE11fbcG2CeLl1Zi+NJgMOfWpdjuUWNte+icrtAO58I=",
+    "./_framework/dotnet.native.js": "sha256-zE11fbcG2CeLl1Zi+NJgMOfWpdjuUWNte+icrtAO58I=",
+    "./_framework/dotnet.runtime.2tx45g8lli.js": "sha256-2lZh9yO0fnzm3Xt7yV+Kox3DH3nK7L8hDhm84VT1xco=",
+    "./_framework/dotnet.runtime.js": "sha256-2lZh9yO0fnzm3Xt7yV+Kox3DH3nK7L8hDhm84VT1xco="
+  }
+}</script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="loading-screen">
+            <div class="loading-brand">AS<span style="color:#2563EB">.</span></div>
+            <svg class="loading-progress">
+                <circle r="40%" cx="50%" cy="50%" />
+                <circle r="40%" cx="50%" cy="50%" />
+            </svg>
+            <div class="loading-progress-text"></div>
+            <div class="loading-name">Aniket Shahane</div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly.66stpp682q.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js', { updateViaCache: 'none' });</script>
+    <script src="js/site.js"></script>
+</body>
+
+</html>
